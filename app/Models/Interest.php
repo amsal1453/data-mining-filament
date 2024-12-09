@@ -12,6 +12,8 @@ class Interest extends Model
 
     protected $table = 'interests';
 
+    protected $fillable = ['id', 'nama_peminatan'];
+
     public function facts(): HasMany
     {
         return $this->hasMany(Fact::class, 'mahasiswa_id');

@@ -12,6 +12,8 @@ class YearsAcademic extends Model
 
     protected $table = 'years_academics';
 
+    protected $fillable = ['tahun', 'semester'];
+
     public function facts(): HasMany
     {
         return $this->hasMany(Fact::class, 'tahun_akademik_id');
